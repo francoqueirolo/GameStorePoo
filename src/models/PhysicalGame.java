@@ -14,9 +14,10 @@ public class PhysicalGame extends VideoGame implements Shippable {
 
     @Override
     public void showDetails() {
-        System.out.println("Plataforma: "+ platform);
+        System.out.println("Código: " + getCode());
         System.out.println("Nombre: " + getTitle());
-        System.out.println("Genero: " + getCategory());
+        System.out.println("Categoría: " + getCategory());
+        System.out.println("Plataforma: "+ platform);
         System.out.println("Costo: $" + getPrice());
         System.out.println("Envio: $" + calculatingFee());
 

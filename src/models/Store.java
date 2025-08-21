@@ -7,7 +7,7 @@ public class Store {
     private Map<String, VideoGame> inventory;
 
     public Store() {
-        this.inventory = new HashMap<>();
+        inventory = new HashMap<>();
     }
 
     public void addGame(VideoGame item) {

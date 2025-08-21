@@ -33,13 +33,15 @@ public class Customer {
 
     public void showMyGames() {
         if (myGames.isEmpty()) {
-            System.out.println("No tienes juegos en tu biblioteca.");
+            System.out.println("No tienes juegos en tu biblioteca...");
         } else {
-            System.out.println(".::: Mis Juegos :::.");
+            System.out.println("");
+            System.out.println("--- MI BIBLIOTECA DE JUEGOS ---");
+
             for (VideoGame game : myGames) {
                 game.showDetails();
+                System.out.println("------------------");
             }
-            System.out.println("------------------");
         }
     }
 }

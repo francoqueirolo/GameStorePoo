@@ -12,9 +12,10 @@ public class DigitalGame extends VideoGame implements Downloadable {
 
     @Override
     public void showDetails() {
+        System.out.println("Código: " + getCode());
         System.out.println("Tipo: Juego Digital");
         System.out.println("Nombre: " + getTitle());
-        System.out.println("Genero: " + getCategory());
+        System.out.println("Categoría: " + getCategory());
         System.out.println("Costo: $" + getPrice());
         downloadFile();
     }

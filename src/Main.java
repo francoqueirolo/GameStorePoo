@@ -32,10 +32,10 @@ public class Main {
         System.out.println("\nBienvenido a GameStoreOOP, " + customer.getName());
 
         do {
-            System.out.println("\n--- MAIN MENU ---");
+            System.out.println("\n--- MENU PRINCIPAL ---");
             System.out.println("1. Ver Catálogo");
             System.out.println("2. Comprar un juego");
-            System.out.println("3. Ver mi galeria");
+            System.out.println("3. Ver mi biblioteca");
             System.out.println("4. Verificar saldo");
             System.out.println("5. salir");
             System.out.print("Ingresa una opción: ");
@@ -54,7 +54,7 @@ public class Main {
                     store.showCatalog();
                     break;
                 case 2:
-                    System.out.print("Ingresa el nombre del video juego: ");
+                    System.out.print("Ingresa el código del video juego: ");
                     String gameToBuy = sc.nextLine();
                     VideoGame game = store.findGame(gameToBuy);
                     if (game != null) {
@@ -67,6 +67,7 @@ public class Main {
                     customer.showMyGames();
                     break;
                 case 4:
+                    System.out.println("\n--- TU SALDO ---");
                     System.out.println("Tu saldo es: $" + customer.getBalance());
                     break;
                 case 5:
