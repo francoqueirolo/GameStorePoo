@@ -2,6 +2,8 @@ package models;
 
 import interfaces.Shippable;
 
+import java.text.DecimalFormat;
+
 public class PhysicalGame extends VideoGame implements Shippable {
     private String platform;
 
@@ -21,7 +23,10 @@ public class PhysicalGame extends VideoGame implements Shippable {
         double updatePrice = getPrice() + calculatingFee();
         setPrice(updatePrice);
 
-        System.out.println("Total: $" + getPrice());
+        DecimalFormat df = new DecimalFormat("0.00");
+        String valorFormateado = df.format(getPrice());
+
+        System.out.println("Total: $" + valorFormateado);
     }
 
     @Override
